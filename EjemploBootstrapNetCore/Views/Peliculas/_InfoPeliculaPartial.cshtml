@@ -1,0 +1,56 @@
+﻿@model Pelicula
+
+@{
+    if (Model != null)
+    {
+        <div class="modal fade" id="peliModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-target="modal">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title" id="myModalLabel">
+                            @Model.Titulo
+                        </h2>
+                    </div>
+                    <div class="modal-body">
+                        <img style="max-height:200px; max-width:200px;" src="~/images/@Model.Imagen" />
+                        <p><strong>Duración: </strong>@Model.Duracion min.</p>
+                        <p><strong>Género: </strong> @Model.Genero </p>
+                        <p><strong>Sinopsis:</strong>  @Model.Sinopsis</p>
+                        <p>
+                            <strong>Valoracion:</strong>
+                            @for (int i = 0; i < Model.Valoracion; i++)
+                            {
+                                <img class="img-responsive" style="width: 20px;" src="~/images/estrella.png" />
+                            }
+                        </p>
+                        <p style="color:red; font-weight: bold;">Ver trailer</p>
+                        <iframe style="height:315px; width:100%" src="@Model.Trailer" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="modal-footer">
+                        <a asp-action="Index" asp-controller="Peliculas" class="btn btn-danger">Volver</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="modal fade" id="peliModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-target="modal">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title" id="myModalLabel">
+                        </h2>
+                    </div>
+                    <div class="modal-body">
+                        <img style="max-height:200px; max-width:200px;" src="~/images/error.png" />
+                    </div>
+                    <div class="modal-footer">
+                        <a asp-action="Index" asp-controller="Peliculas" class="btn btn-danger">Volver</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @*<p class="alert alert-warning">@ViewData["mensaje"]</p>*@
+    }
+}

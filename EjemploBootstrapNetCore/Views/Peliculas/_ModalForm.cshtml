@@ -1,0 +1,54 @@
+﻿<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#botonsubmit").click(function () {
+            $("#formnuevapelicula").submit();
+        });
+    });
+</script>
+
+<div id="modalNuevaPelicula" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <form id="formnuevapelicula" method="post" action="Peliculas/ModalForm">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label>Titulo</label>
+                        <input name="Titulo" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label>Duración</label>
+                        <input name="Duracion" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label>Género</label>
+                        <input name="Genero" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label>Sinopsis</label>
+                        <textarea name="Sinopsis" class="form-control" maxlength="300"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Trailer</label>
+                        <input name="Trailer" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label>Imagen</label>
+                        <input name="Imagen" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label>Valoración</label>
+                        <input name="Valoracion" class="form-control" />
+                    </div>
+                </div>
+                <br />
+                <div class="modal-footer">
+                    <input type="submit" id="botonsubmit" value="Nueva peli" class="btn btn-primary" />
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>

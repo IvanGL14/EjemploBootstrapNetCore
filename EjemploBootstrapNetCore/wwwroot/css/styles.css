@@ -1,0 +1,102 @@
+    html{
+        font-family: 'Nunito', sans-serif;
+    }
+
+  .carousel-inner img {
+      width: 100%; /* Set width to 100% */
+      height: 100%;
+      margin: auto;
+      min-height:200px;
+  }
+
+  .contenedor-peliculas{
+  margin-bottom: 20px;
+  display: block;
+  overflow: hidden;
+  }
+
+  .contenedor-peliculas a{
+  font-size: 23px;
+  font-weight: 700;
+  color: grey;
+  }
+
+.contenedor-peliculas a:hover{
+  color: black;
+  text-decoration: none;
+  }
+
+.contenedor-seccion-fotos{
+  display: block; 
+  overflow: hidden;  
+}
+
+  .contenedor-seccion-fotos img{
+display: inline-block; 
+overflow: hidden;  
+height: 400px;
+width: 500px;  
+-webkit-transition: all 350ms ease-in-out; /* IE 9*/
+-moz-transition: all 350ms ease-in-out; /* Firefox*/
+-ms-transition: all 350ms ease-in-out; /* Safari and Chrome */
+-o-transition: all 350ms ease-in-out; /* Opera  */    
+}
+
+.contenedor-seccion-fotos:hover img {
+-webkit-transform:scale(1.2);
+-moz-transform:scale(1.2);
+-ms-transform:scale(1.2);
+-o-transform:scale(1.2);
+transform:scale(1.2);
+}
+
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
+  /* Ocultar el texto del carrusel cuando la pantalla tiene menos de 600 píxeles de ancho  */
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display: none; 
+    }
+  
+*{box-sizing:border-box;}
+
+    .container{
+      width:95%;
+      max-width:900px;
+      padding:32px 64px;
+      margin:auto;
+    }
+
+    .social{
+      /*las imágenes usadas tienen width de 48px*/
+      width:48px;
+      position:fixed;
+      top:50px;
+      right:0;
+    }
+
+    /* Extra centrado vertical*/
+
+    .social{
+      /*border:1px solid #000;*/
+      top:50%;
+      height:205px;
+      /*para poner height 192 deberíamos haber indicado en el reset de estilos font-size:0;*/
+      margin-top:-100px;
+    }  
+  }
+
+  @media (max-width:1200px) {
+  	  .contenedor-seccion-fotos img{
+display: inline-block; 
+overflow: hidden;  
+height: 100%;
+width: 100%;  
+-webkit-transition: all 350ms ease-in-out; /* IE 9*/
+-moz-transition: all 350ms ease-in-out; /* Firefox*/
+-ms-transition: all 350ms ease-in-out; /* Safari and Chrome */
+-o-transition: all 350ms ease-in-out; /* Opera  */    
+	}
+}
