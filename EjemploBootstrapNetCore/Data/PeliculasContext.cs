@@ -13,3 +13,5 @@ namespace EjemploBootstrapNetCore.Data
         public DbSet<Pelicula> Peliculas { get; set; }
     }
 }
+
+
